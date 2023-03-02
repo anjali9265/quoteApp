@@ -1,12 +1,11 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next'
 import prisma from '../../../lib/prisma';
 
-type Data = [{
+type Data = {
   id: number,
   visitCount: number
-}]
+}
 
 export default async function handler(
   req: NextApiRequest,
