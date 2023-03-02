@@ -14,7 +14,7 @@ export default async function handler(
 ) {
   if (req.method === 'POST') {
     const currentCount = await prisma.counter.findMany()
-    const count = currentCount.pop().visitCount + 1
+    const count = currentCount?.pop()?.visitCount + 1
     const result = await prisma.counter.update({
       where: { id: 1 },
       data: { visitCount: count }
