@@ -77,6 +77,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  width:500px;
   padding: 4rem 0;
 }
 
@@ -104,23 +105,32 @@
   transform: translateZ(0);
 }
 
-.logo,
-.thirteen {
+.logo {
   position: relative;
 }
 
 .thirteen {
   display: flex;
   justify-content: center;
+  flex-grow: 0;
   align-items: center;
-  width: 75px;
-  height: 75px;
-  padding: 25px 10px;
+  padding: 125px 50px 150px 100px;
   margin-left: 16px;
   transform: translateZ(0);
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: 0px 2px 8px -1px #0000001a;
+}
+
+.button{
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  padding: 10px 50px;
+  margin: 50px 150px ;
+  background-color:  #0000001a;
+  transform: translateZ(0);
+  border-radius: var(--border-radius);
 }
 
 .thirteen::before,
@@ -260,11 +270,6 @@
 @media (prefers-color-scheme: dark) {
   .vercelLogo {
     filter: invert(1);
-  }
-
-  .logo,
-  .thirteen img {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
   }
 }
 
