@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 export default function App({ Component, pageProps }: AppProps) {
   const updateCount = async () => {
     try {
-      const url = `/api/hello`;
+      const url = `/api/count`;
       await fetch(url, {
         method: 'POST',
         body: ``,
@@ -17,7 +17,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     updateCount();
-    console.log('i fire once');
   }, []);
   return <Component {...pageProps} />
 }
