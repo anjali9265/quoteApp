@@ -24,6 +24,9 @@ export default async function handler(
     }
   } else {
     const currentCount = await prisma.counter.findMany()
-    return res.status(200).send(currentCount);
+    if (currentCount[0] != undefined) {
+      const result = currentCount[0];
+      return res.status(200).send(result);
+    }
   }
 }
